@@ -11,6 +11,11 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/blog/css/main.css">
+        <link rel="stylesheet" href="/blog/css/talaria.css">
+
+        <!-- Custom JavaScript -->
+        <script type="text/javascript" src="/blog/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/blog/js/talaria.js"></script>
 
     </head>
     <body>
@@ -21,7 +26,7 @@
             <a class="extra" href="/">home</a>
           </div>
 
-          <h2>Welcome to Jekyll!</h2>
+          <h2><a href="#" class="permalink">Welcome to Jekyll!</a></h2>
 <p class="meta">01 Dec 2013</p>
 
 <div class="post">
@@ -41,8 +46,28 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 
 </div>
 
+<div class="comments-wrapper">
+    <div class="comments-header" style="display:none;">
+        <h3>Comments</h3> <small>Comments provided via <a class="github-comments-link" href="#">github</a></small>
+    </div>
+    <div class="comment-count"><a href="#"></a></div>
+    <div class="comments" style="display:none">
+        <!-- comments are dynamically added here -->
+        <a class="add-comment-link" href="#"><button type="submit" class="comment-button">Add a Comment</button></a>
+    </div>
+</div>
+
 
           <div class="footer">
+            <div id="comment-template" style="display:none;">
+    <img class="avatar" height="48" width="48" />
+    <div class="comment-outer-wrapper">
+        <div class="comment-inner-wrapper">
+            <div class="comment-header"><a class="profile-link"><b></b></a> commented on <a class="changeset-link"><code class="sha"></code></a> <span class="time"></span></div>
+            <div class="comment-body"></div>
+        </div>
+    </div>
+</div>
             <div class="contact">
               <p>
                 Your Name<br />

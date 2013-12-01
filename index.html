@@ -11,6 +11,11 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/blog/css/main.css">
+        <link rel="stylesheet" href="/blog/css/talaria.css">
+
+        <!-- Custom JavaScript -->
+        <script type="text/javascript" src="/blog/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/blog/js/talaria.js"></script>
 
     </head>
     <body>
@@ -32,6 +37,15 @@
 
 
           <div class="footer">
+            <div id="comment-template" style="display:none;">
+    <img class="avatar" height="48" width="48" />
+    <div class="comment-outer-wrapper">
+        <div class="comment-inner-wrapper">
+            <div class="comment-header"><a class="profile-link"><b></b></a> commented on <a class="changeset-link"><code class="sha"></code></a> <span class="time"></span></div>
+            <div class="comment-body"></div>
+        </div>
+    </div>
+</div>
             <div class="contact">
               <p>
                 Your Name<br />
