@@ -12,6 +12,9 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 
+        <script type="text/javascript" src="{{ site.baseurl }}/js/talaria.js"></script>
+        <link href="{{ site.baseurl }}/css/talaria.css" rel="stylesheet" type="text/css" />
+
     </head>
     <body>
 
@@ -24,6 +27,8 @@
           {{ content }}
 
           <div class="footer">
+             {% include comments-template.html %}
+
             <div class="contact">
               <p>
                 Your Name<br />
