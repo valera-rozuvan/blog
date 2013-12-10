@@ -12,7 +12,7 @@
 var REPOSITORY_NAME = 'blog',
     GITHUB_USERNAME = 'valera-rozuvan',
     COMMENTABLE_CONTENT_PATH_PREFIX = '_posts/',
-    CONTENT_SUFFIX = '.md',
+    CONTENT_SUFFIX = '.markdown',
     LOCAL_STORAGE_SUPPORTED = false,
     CACHE_TIMEOUT = 10 * 60 * 1000, // cache github data for 10 minutes
     COMMENT_API_ENDPOINT = 'https://api.github.com/repos/' + GITHUB_USERNAME + '/' + REPOSITORY_NAME + '/comments',
