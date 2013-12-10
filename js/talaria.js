@@ -9,8 +9,8 @@
 /*
  * Configuration
  */
-var REPOSITORY_NAME = 'm2w.github.com',
-    GITHUB_USERNAME = 'm2w',
+var REPOSITORY_NAME = 'valera-rozuvan.github.com',
+    GITHUB_USERNAME = 'valera-rozuvan',
     COMMENTABLE_CONTENT_PATH_PREFIX = '_posts/',
     CONTENT_SUFFIX = '.md',
     LOCAL_STORAGE_SUPPORTED = false,
@@ -149,8 +149,6 @@ var retrieveDataForPermalink = function(url) {
     var wrapper_dfd = new $.Deferred(),
         path = extrapolatePathFromPermalink(url),
         cache;
-
-    console.log('[retrieveDataForPermalink]: path = ', path);
     if (LOCAL_STORAGE_SUPPORTED) {
         cache = maybeGetCachedVersion(url);
         if (cache) {
@@ -244,9 +242,6 @@ $(document).ready(function() {
     // iterate over permalinks and retrieve relevant commit and comment data
     $('a.permalink').map(function() {
         var permalink = this;
-        console.log('[$(document).ready()]: permalink = ', permalink);
-        console.log('[$(document).ready()]: permalink.href = ', permalink.href);
-        console.log('');
         $.when(retrieveDataForPermalink(permalink.href)).then(function() {
             var commentHtml = this.comments.sort(byAscendingDate).map(generateHtmlForComments);
             updateCommentMeta($(permalink), this);
