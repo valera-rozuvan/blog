@@ -9,7 +9,7 @@
 /*
  * Configuration
  */
-var REPOSITORY_NAME = 'valera-rozuvan.github.com',
+var REPOSITORY_NAME = 'blog',
     GITHUB_USERNAME = 'valera-rozuvan',
     COMMENTABLE_CONTENT_PATH_PREFIX = '_posts/',
     CONTENT_SUFFIX = '.md',
