@@ -149,6 +149,8 @@ var retrieveDataForPermalink = function(url) {
     var wrapper_dfd = new $.Deferred(),
         path = extrapolatePathFromPermalink(url),
         cache;
+
+    console.log('[retrieveDataForPermalink]: path = ', path);
     if (LOCAL_STORAGE_SUPPORTED) {
         cache = maybeGetCachedVersion(url);
         if (cache) {
@@ -243,7 +245,7 @@ $(document).ready(function() {
     $('a.permalink').map(function() {
         var permalink = this;
         console.log('[$(document).ready()]: permalink = ', permalink);
-        console.log('[$(document).ready()]: permalink.href = ', permalink,href);
+        console.log('[$(document).ready()]: permalink.href = ', permalink.href);
         console.log('');
         $.when(retrieveDataForPermalink(permalink.href)).then(function() {
             var commentHtml = this.comments.sort(byAscendingDate).map(generateHtmlForComments);
